@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Glasses</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+</head>
+<style type="text/css">
+    body {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 12px;
+    }
+
+    .well {
+        background-color: transparent;
+        border: 1px solid #f0f2f7;
+        box-shadow: none;
+    }
+
+    .form-control {
+        background-color: #f0f2f7;
+        border: #e3e8f0;
+        border-radius: 5px;
+        box-shadow: none;
+        outline: none;
+    }
+
+    .control-label {
+        font-weight: normal;
+    }
+
+    .custom-radio,
+    .custom-checkbox {
+        padding-left: 25px;
+        position: relative;
+    }
+
+    .custom-radio label,
+    .custom-checkbox label {
+        font-weight: normal;
+        margin-bottom: 0;
+        cursor: pointer;
+        vertical-align: middle;
+    }
+
+    .custom-radio input[type="radio"],
+    .custom-radio input[type="checkbox"],
+    .custom-checkbox input[type="radio"],
+    .custom-checkbox input[type="checkbox"] {
+        display: none;
+    }
+
+    .custom-radio input[type="radio"] + label,
+    .custom-radio input[type="checkbox"] + label,
+    .custom-checkbox input[type="radio"] + label,
+    .custom-checkbox input[type="checkbox"] + label {
+        background-color: #fff;
+        border-radius: 50%;
+        display: inline-block;
+        height: 16px;
+        width: 16px;
+        border: 1px solid #a2a8bf;
+        padding-left: 0;
+        position: absolute;
+        left: 0;
+        top: 2px;
+    }
+
+    .custom-radio input[type="radio"]:checked + label:after {
+        content: '';
+        background-color: #343e5c;
+        height: 8px;
+        margin: 5px;
+        width: 8px;
+        display: block;
+        border-radius: 50%;
+    }
+
+    .custom-checkbox input[type="checkbox"] + label {
+        border-radius: 5px;
+    }
+
+    .custom-checkbox input[type="checkbox"]:checked + label:after {
+        content: '';
+        background-color: #343e5c;
+        position: absolute;
+        height: 6px;
+        left: 4px;
+        bottom: 3px;
+        -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        width: 2px;
+    }
+
+    .custom-checkbox input[type="checkbox"]:checked + label {
+        border-color: #343e5c;
+    }
+
+    .custom-checkbox input[type="checkbox"]:checked + label:before {
+        content: '';
+        background-color: #343e5c;
+        position: absolute;
+        height: 8px;
+        left: 8px;
+        bottom: 3px;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+        width: 2px;
+    }
+
+    .select-wrap-label {
+        position: relative;
+        font-weight: normal;
+        overflow: hidden;
+        margin: 0;
+    }
+
+    .select-wrap-label:before {
+        top: 13px;
+        right: 6px;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-color: #cccccc transparent transparent;
+        -o-border-image: none;
+        border-image: none;
+        border-style: solid;
+        border-width: 8px 6px;
+    }
+
+    .select-wrap-label select {
+        float: left;
+        padding-right: 30px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        cursor: pointer;
+    }
+
+    .section-title {
+        margin: 0 0 5px;
+        font-size: 18px;
+        text-align: center;
+        color: #343e5c;
+        font-weight: bold;
+        border-bottom: #ced7ec 2px solid;
+        padding-bottom: 8px;
+    }
+
+    .options-wrap .custom-checkbox {
+        margin-bottom: 5px;
+    }
+
+    .fields-wrap {
+        background-color: #f0f2f7;
+        padding: 15px 20px 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        height: 150px;
+    }
+
+    .fields-wrap .form-control {
+        background-color: #fff;
+    }
+
+    .fields-wrap .form-group {
+        margin-bottom: 5px;
+    }
+
+    .fields-wrap .custom-checkbox {
+        padding-left: 15px;
+    }
+
+    .fields-wrap .custom-checkbox input + label {
+        position: relative;
+        top: 6px;
+    }
+    .total
+    {
+        text-align: right;
+        color: #343e5c;
+        font-size: 15px;
+    }
+    .total strong
+    {
+        font-size: 16px;
+    }
+    .total .value
+    {
+        font-size: 16px;
+    }
+    .panel-body
+    {
+        padding: 20px 15px;
+    }
+</style>
+<body>
+<div class="panel">
+    <div class="panel-body">
+        <div class="well">
+            <div class="row">
+                <div class="col-sm-6">
+                    <!--Left-->
+                    <div class="section">
+                        <h3 class="section-title">OS-Left</h3>
+                        <div class="fields-wrap form-horizontal">
+                            <div class="form-group">
+                                <div class="col-sm-6 text-right">
+                                    <label for="lense-group-l" class="control-label">Lense group</label>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label class="select-wrap-label">
+                                        <select name="lense-group-l" id="lense-group-l" class="form-control">
+                                            <option value="1.6">1.6</option>
+                                        </select>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-6 text-right">
+                                    <label for="thickness-l" class="control-label">Thickness</label>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label class="select-wrap-label">
+                                        <select name="thickness-l" id="thickness-l" class="form-control">
+                                            <option value="1.6">1.6</option>
+                                        </select>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row options-wrap">
+                            <div class="col-sm-4">
+                                <div class="custom-checkbox">
+                                    <input type="checkbox" value="" id="uncoated">
+                                    <label for="uncoated"></label>
+                                    <label for="uncoated">Uncoated <span class="option-value">+95</span></label>
+                                </div>
+                                <div class="custom-checkbox">
+                                    <input type="checkbox" value="" id="hc">
+                                    <label for="hc"></label>
+                                    <label for="hc">HC <span class="option-value">+60</span></label>
+                                </div>
+                                <div class="custom-checkbox">
+                                    <input type="checkbox" value="" id="hmc">
+                                    <label for="hmc"></label>
+                                    <label for="hmc">HMC <span class="option-value">+60</span></label>
+                                </div>
+                                <div class="custom-checkbox">
+                                    <input type="checkbox" value="" id="shm">
+                                    <label for="shm"></label>
+                                    <label for="shm">SHM <span class="option-value">+60</span></label>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="custom-checkbox">
+                                    <input type="checkbox" value="" id="cyl">
+                                    <label for="cyl"></label>
+                                    <label for="cyl">CYL <span class="option-value">+60</span></label>
+                                </div>
+                                <div class="custom-checkbox">
+                                    <input type="checkbox" value="" id="sph">
+                                    <label for="sph"></label>
+                                    <label for="sph">SPH <span class="option-value">+60</span></label>
+                                </div>
+                                <div class="custom-checkbox">
+                                    <input type="checkbox" value="" id="drp">
+                                    <label for="drp"></label>
+                                    <label for="drp">DRP <span class="option-value">+60</span></label>
+                                </div>
+                                <div class="custom-checkbox">
+                                    <input type="checkbox" value="" id="lenticular">
+                                    <label for="lenticular"></label>
+                                    <label for="lenticular">Lenticular <span class="option-value">+60</span></label>
+                                </div>
+                                <div class="custom-checkbox">
+                                    <input type="checkbox" value="" id="blue-block">
+                                    <label for="blue-block"></label>
+                                    <label for="blue-block">Bllue Block <span class="option-value">+60</span></label>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="custom-checkbox">
+                                    <input type="checkbox" value="" id="tint">
+                                    <label for="tint"></label>
+                                    <label for="tint">Tint <span class="option-value">+120</span></label>
+                                </div>
+                                <div class="custom-checkbox">
+                                    <input type="checkbox" value="" id="polar">
+                                    <label for="polar"></label>
+                                    <label for="polar">Polar <span class="option-value">+180</span></label>
+                                </div>
+                                <div class="custom-checkbox">
+                                    <input type="checkbox" value="" id="pho">
+                                    <label for="pho"></label>
+                                    <label for="pho">Pho <span class="option-value">+200</span></label>
+                                </div>
+                                <div class="custom-checkbox">
+                                    <input type="checkbox" value="" id="trans">
+                                    <label for="trans"></label>
+                                    <label for="trans">Trans <span class="option-value">+250</span></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <!--Right-->
+                    <h3 class="section-title">OS-Right</h3>
+                    <div class="fields-wrap form-horizontal">
+                        <div class="form-group">
+                            <div class="col-sm-6 text-right">
+                                <label for="lense-group-r" class="control-label">Lense group</label>
+                            </div>
+                            <div class="col-sm-6">
+                                <label class="select-wrap-label">
+                                    <select name="lense-group-l" id="lense-group-r" class="form-control">
+                                        <option value="1.6">1.6</option>
+                                    </select>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-6 text-right">
+                                <label for="thickness-r" class="control-label">Thickness</label>
+                            </div>
+                            <div class="col-sm-6">
+                                <label class="select-wrap-label">
+                                    <select name="thickness-r" id="thickness-r" class="form-control">
+                                        <option value="1.6">1.6</option>
+                                    </select>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-6 text-right"><label for="same-as-left" class="control-label">Same as
+                                left</label></div>
+                            <div class="col-sm-6 custom-checkbox">
+                                <input type="checkbox" id="same-as-left">
+                                <label for="same-as-left"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row options-wrap">
+                        <div class="col-sm-4">
+                            <div class="custom-checkbox">
+                                <input type="checkbox" value="" id="uncoated-2">
+                                <label for="uncoated-2"></label>
+                                <label for="uncoated-2">Uncoated <span class="option-value">+95</span></label>
+                            </div>
+                            <div class="custom-checkbox">
+                                <input type="checkbox" value="" id="hc-2">
+                                <label for="hc-2"></label>
+                                <label for="hc-2">HC <span class="option-value">+95</span></label>
+                            </div>
+                            <div class="custom-checkbox">
+                                <input type="checkbox" value="" id="hmc-2">
+                                <label for="hmc-2"></label>
+                                <label for="hmc-2">HMC <span class="option-value">+95</span></label>
+                            </div>
+                            <div class="custom-checkbox">
+                                <input type="checkbox" value="" id="shm-2">
+                                <label for="shm-2"></label>
+                                <label for="shm-2">SHM <span class="option-value">+95</span></label>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="custom-checkbox">
+                                <input type="checkbox" value="" id="cyl-2">
+                                <label for="cyl-2"></label>
+                                <label for="cyl-2">CYL <span class="option-value">+60</span></label>
+                            </div>
+                            <div class="custom-checkbox">
+                                <input type="checkbox" value="" id="sph-2">
+                                <label for="sph-2"></label>
+                                <label for="sph-2">SPH <span class="option-value">+60</span></label>
+                            </div>
+                            <div class="custom-checkbox">
+                                <input type="checkbox" value="" id="drp-2">
+                                <label for="drp-2"></label>
+                                <label for="drp-2">DRP <span class="option-value">+60</span></label>
+                            </div>
+                            <div class="custom-checkbox">
+                                <input type="checkbox" value="" id="lenticular-2">
+                                <label for="lenticular-2"></label>
+                                <label for="lenticular-2">Lenticular <span class="option-value">+60</span></label>
+                            </div>
+                            <div class="custom-checkbox">
+                                <input type="checkbox" value="" id="blue-block-2">
+                                <label for="blue-block-2"></label>
+                                <label for="blue-block-2">Bllue Block <span class="option-value">+60</span></label>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="custom-checkbox">
+                                <input type="checkbox" value="" id="tint-2">
+                                <label for="tint-2"></label>
+                                <label for="tint-2">Tint <span class="option-value">+120</span></label>
+                            </div>
+                            <div class="custom-checkbox">
+                                <input type="checkbox" value="" id="polar-2">
+                                <label for="polar-2"></label>
+                                <label for="polar-2">Polar <span class="option-value">+180</span></label>
+                            </div>
+                            <div class="custom-checkbox">
+                                <input type="checkbox" value="" id="pho-2">
+                                <label for="pho-2"></label>
+                                <label for="pho-2">Pho <span class="option-value">+200</span></label>
+                            </div>
+                            <div class="custom-checkbox">
+                                <input type="checkbox" value="" id="trans-2">
+                                <label for="trans-2"></label>
+                                <label for="trans-2">Trans <span class="option-value">+250</span></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="total">
+            Total Price: <strong>760 EUR</strong>
+        </div>
+    </div>
+</div>
+</body>
+</html>

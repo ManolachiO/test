@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: sans-serif;
+}
+.page-wrapper {
+    display: flex;
+    align-items: flex-start;
+}
+
+.assets {
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.assets__cell {
+    width: 150px;
+    height: 100px;
+}
+
+.content {
+    width: calc(100% - 300px);
+}
+
+.journal {
+    width: 700px;
+    height: 600px;
+    /*display: flex;*/
+    margin: 30px auto;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+}
+
+.sticker {
+    width: 150px;
+    height: 100px;
+    background: transparent no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.sticker.selected {
+    border: 1px solid rgba(255, 0, 0, 0.5);
+}
+
+.sticker.moving {
+    transition: 0.2s left,
+    0.2s top;
+}
+
+.sticker--1 {
+    background-image: url('img/elements/82458_685794_s.png');
+}
+
+.sticker--2 {
+    background-image: url('img/elements/82459_994301_s.png');
+}
+
+.sticker--3 {
+    background-image: url('img/elements/617860_596589_s.png');
+}
+
+.sticker--4 {
+    background-image: url('img/elements/1521004_806678_s.png');
+}
+
+.sticker--5 {
+    background-image: url('img/elements/1522634_226137_m1.png');
+}
+
+.sticker--6 {
+    background-image: url('img/elements/2349032_797834_m1.png');
+}
+
+.sticker--7 {
+    background-image: url('img/elements/3185131_542841_m.png');
+}
+
+.sticker--8 {
+    background-image: url('img/elements/3185150_647040_s.png');
+}
+
+.selection {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgba(255,100,100,0.5);
+}
+
+.options
+{
+    width: 250px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.1);
+    top: 100%;
+    left: 50%;
+    margin-left: -125px;
+    text-align: center;
+    position: absolute;
+}
+
+.options a{
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 3px;
+    color: #444546;
+    line-height: 50px;
+    font-size: 13px;
+}
+
+.fields-wrap
+{
+
+}

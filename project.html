@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Project</title>
+</head>
+<body>
+<main>
+    <div class="page-wrapper">
+        <aside class="assets">
+            <div class="assets__cell">
+                <div class="sticker sticker--1" id="st1"></div>
+            </div>
+            <div class="assets__cell">
+                <div class="sticker sticker--2"></div>
+            </div>
+            <div class="assets__cell">
+                <div class="sticker sticker--3"></div>
+            </div>
+            <div class="assets__cell">
+                <div class="sticker sticker--4"></div>
+            </div>
+            <div class="assets__cell">
+                <div class="sticker sticker--5"></div>
+            </div>
+            <div class="assets__cell">
+                <div class="sticker sticker--6"></div>
+            </div>
+        </aside>
+        <div class="content">
+            <div>
+                <input type="text" v-model="title">
+            </div>
+            <h3>{{title}}</h3>
+            <div class="journal" id="jour">
+            </div>
+        </div>
+    </div>
+    <div id="info"></div>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script>
+    var app = new Vue({
+        el: '.content',
+        data: {
+            title: 'Page title!'
+        }
+    })
+</script>
+<!--<script src="js/drag.js"></script>-->
+</body>
+</html>
